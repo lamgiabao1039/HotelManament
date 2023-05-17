@@ -49,3 +49,5 @@ D:\QLKS\QLKS\obj\Debug\QLKS.csproj.CoreCompileInputs.cache
 D:\QLKS\QLKS\obj\Debug\QLKS.csproj.CopyComplete
 D:\QLKS\QLKS\obj\Debug\QLKS.exe
 D:\QLKS\QLKS\obj\Debug\QLKS.pdb
+D:\QLKS\QLKS\bin\Debug\Database1.mdf
+D:\QLKS\QLKS\bin\Debug\Database1_log.ldf

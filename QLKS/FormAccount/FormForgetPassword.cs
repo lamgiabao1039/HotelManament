@@ -16,5 +16,12 @@ namespace QLKS
         {
             InitializeComponent();
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            formLogin.ShowDialog();
+            this.Close();
+        }
     }
 }

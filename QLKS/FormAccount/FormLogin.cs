@@ -31,17 +31,51 @@ namespace QLKS
         {
 
         }
+        
+        Modify modify=new Modify();
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            FormRoom room = new FormRoom();
-            room.Show();
-            Hide();
+            string username = guna2TextBox1.Text;
+            string password = guna2TextBox2.Text;
+            string query ="select * from Account where UserName = '"+username+"' and Password = '"+password+"'";
+            string query2 = "select role from Account where UserName = '" + username + "' and Password = '" + password + "'";
+            if (modify.accounts(query).Count != 0 && modify.role(query2).Trim() == "Customer")
+            {
+                FormRoom room = new FormRoom();
+                room.Show();
+                Hide();
+            }
+            else if (modify.accounts(query).Count != 0 && modify.role(query2).Trim() == "Receiptionist")
+            {
+                FormManageFood food = new FormManageFood();
+                food.Show();
+                Hide();
+            }
+            else
+            {
+                label3.Visible = true;
+                label2.Visible = true;
+            }
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            FormSignUp signup = new FormSignUp();
+            signup.Show();
+            this.Hide();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            FormForgetPassword formForgetPassword = new FormForgetPassword();
+            formForgetPassword.Show();
+            this.Hide();
         }
     }
 }
